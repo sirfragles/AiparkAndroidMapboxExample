@@ -6,7 +6,17 @@ This project shows you how to integrate the [ Aipark](https://www.aipark.io/) pa
 The app shows parking informations on a mapbox map. You can click on the parking areas to get more informations about it and see the predicted or actual occupancy over the day. If you click on the map for a longer time, an optimal route is shown leading to a parking spot nearby the desired location.
 
 You can use this app as a starting point to develop your own parking app. If you have any questions or hints we are happy to [ hear](mailto:info@aipark.io)  from you!
+
+Here are some screenshots of the app:
   
+<p align="center">
+  <img width="250" src="screenshots/ParkingInformation.jpg">
+  <img width="250" src="screenshots/OptimalRouteDescription.jpg">
+  <img width="250" src="screenshots/OptimalRoute.jpg">
+  <img width="250" src="screenshots/LiveParkEvent.jpg">
+  <img width="250" src="screenshots/Navigation.jpg">
+</p>
+
 ## Build App
 ### 1. API keys
 
@@ -58,6 +68,7 @@ EventBus.getDefault().postSticky(new CenterPositionEvent(new MapLatLng(event.get
 ``` 
 
 The following events are implemented:
+
 | send/receive | class | purpose |  
 | ----- | ----- | --------- |  
 | send | CenterCurrentPositionEvent | center the current position of the user on the map |  
