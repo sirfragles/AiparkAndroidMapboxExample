@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:textAlignment="center">
+
+    <ScrollView
+        android:id="@+id/details_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/cancel_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/details_parking_area_name"
+                    android:layout_width="0dp"
+                    android:layout_height="31dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:paddingLeft="59dp"
+                    android:paddingRight="59dp"
+                    android:text=""
+                    android:textAlignment="center"
+                    android:textColor="@color/colorStatusBar"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/shareView"
+                    app:textAllCaps="true" />
+
+                <ImageView
+                    android:id="@+id/shareView"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:alpha="0.1"
+                    android:background="@drawable/popup_edit_backgroud_grey"
+                    android:tint="@color/grey_600"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="24dp"
+                    android:layout_height="23dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:tint="@color/grey_600"
+                    app:layout_constraintBottom_toBottomOf="@+id/shareView"
+                    app:layout_constraintEnd_toEndOf="@+id/shareView"
+                    app:layout_constraintStart_toStartOf="@+id/shareView"
+                    app:layout_constraintTop_toTopOf="@+id/shareView"
+                    app:srcCompat="@drawable/ic_share" />
+            </android.support.constraint.ConstraintLayout>
+
+
+            <!-- Separator -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@color/grey_300" />
+
+
+            <TextView
+                android:id="@+id/textViewChartHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:text="@string/chanceFreeSpot"
+                android:textAlignment="center" />
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chartForecast"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp" />
+
+            <LinearLayout
+                android:id="@+id/groupSlots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Separator -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey_300" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewSlots"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:srcCompat="@drawable/parking_areas" />
+
+                    <TextView
+                        android:id="@+id/textViewSlots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text=""
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintLeft_toRightOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewChangeSlots"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupCosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Separator -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey_300" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewDollar"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:srcCompat="@drawable/__dollar" />
+
+                    <TextView
+                        android:id="@+id/textViewCosts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/price"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintLeft_toRightOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewPriceString"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="3dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupOpeningHours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Separator -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey_300" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:srcCompat="@drawable/clock" />
+
+                    <TextView
+                        android:id="@+id/textViewOpeningHours"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/opening_hours"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintLeft_toRightOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewOpeningHoursString"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="3dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupMaxStay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Separator -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey_300" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageView8"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:srcCompat="@drawable/ic_alarm_on_black_48dp" />
+
+                    <TextView
+                        android:id="@+id/textViewMaxStayHeading"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="3dp"
+                        android:text="@string/max_schedule"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        app:layout_constraintLeft_toRightOf="@+id/imageView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView7"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textViewMaxStay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="80dp"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="3dp"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/groupOtherAttr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <!-- Separator -->
+                <ImageView
+                    android:id="@+id/separatorOtherAttr"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@color/grey_300" />
+
+                <LinearLayout
+                    android:id="@+id/groupResident"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewResident"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:srcCompat="@drawable/__bewohner" />
+
+                    <TextView
+                        android:id="@+id/textViewResident"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/residential_parking_area" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewChangeResident"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/groupDisabled"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewDisabled"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:srcCompat="@drawable/__disabled" />
+
+                    <TextView
+                        android:id="@+id/textViewDisabled"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/disabled_parking_area" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewChangeDisabled"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/groupWomen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/imageViewWomen"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="32dp"
+                        android:tint="@color/grey_600"
+                        app:srcCompat="@drawable/__pram" />
+
+                    <TextView
+                        android:id="@+id/textViewWomen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/woman_parking_area" />
+                    <!--<TextView
+                        android:text="ändern"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewChangeWomen"
+                        app:layout_constraintTop_toTopOf="@+id/imageView7"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView7"
+                        android:layout_marginStart="8dp"
+                        app:layout_constraintLeft_toRightOf="@+id/textView4"
+                        android:layout_marginEnd="32dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        android:layout_gravity="center_vertical"/>-->
+
+                </LinearLayout>
+            </LinearLayout>
+            <!-- Separator -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@color/grey_300" />
+
+            <RelativeLayout
+                android:id="@+id/final_destination_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent">
+
+                <Button
+                    android:id="@+id/navigationButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/popup_button_arrival_blue"
+                    android:stateListAnimator="@null"
+                    android:text="@string/start_navigation"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/details_close"
+            android:textColor="@color/mapbox_navigation_view_color_primary_text_dark"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="-20dp"
+            android:layout_toLeftOf="@id/cancel_button"
+            android:alpha="1"
+            android:padding="25dp"
+            android:tint="@color/mapbox_navigation_view_color_primary_text"
+            android:visibility="visible"
+            app:srcCompat="@drawable/close" />
+    </RelativeLayout>
+
+</LinearLayout>

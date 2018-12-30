@@ -1,0 +1,49 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/mainColor</item>
+        <item name="colorPrimaryDark">@color/mainColor</item>
+        <item name="colorAccent">@color/mainColor</item>
+        <item name="android:itemTextAppearance">@style/itemTextStyle.AppTheme</item>
+        <item name="android:navigationBarColor">@color/mainColor</item>
+    </style>
+
+    <style name="itemTextStyle.AppTheme" parent="@android:style/TextAppearance.Widget.IconMenu.Item">
+        <item name="android:textColor">@color/grey_600</item>
+    </style>
+
+
+    <style name="MyCustomTheme" parent="NavigationViewLight">
+        <item name="navigationViewPrimary">@color/mainColor</item>
+        <item name="navigationViewSecondary">@color/mapbox_navigation_view_color_secondary_dark
+        </item>
+        <item name="navigationViewAccent">@color/mapbox_navigation_view_color_accent_dark</item>
+        <item name="navigationViewPrimaryText">@color/mapbox_navigation_view_color_secondary_dark
+        </item>
+        <item name="navigationViewSecondaryText">
+            @color/mapbox_navigation_view_color_accent_text_dark
+        </item>
+
+        <item name="navigationViewListBackground">@color/mainColor</item>
+
+        <item name="navigationViewBannerBackground">@color/mainColor</item>
+        <item name="navigationViewBannerPrimaryText">
+            @color/mapbox_navigation_view_color_banner_primary_text_dark
+        </item>
+        <item name="navigationViewBannerSecondaryText">
+            @color/mapbox_navigation_view_color_banner_secondary_text_dark
+        </item>
+        <item name="navigationViewBannerManeuverPrimary">
+            @color/mapbox_navigation_view_color_banner_maneuver_primary_dark
+        </item>
+        <item name="navigationViewBannerManeuverSecondary">
+            @color/mapbox_navigation_view_color_banner_maneuver_secondary_dark
+        </item>
+
+        <item name="navigationViewProgress">@color/mainColor</item>
+        <item name="navigationViewProgressBackground">@color/mainColor</item>
+
+        <item name="navigationViewRouteStyle">@style/NavigationMapRoute</item>
+    </style>
+
+</resources>

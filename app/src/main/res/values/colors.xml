@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="mainColor">#4C9045</color>
+    <color name="simpleGrey">#f2f2f2</color>
+
+    <color name="colorGreen">#42A11C</color>
+    <color name="colorGreenYellow">#9cb400</color>
+    <color name="colorYellow">#fdd800</color>
+    <color name="colorOrange">#f25900</color>
+    <color name="colorRed">#900f0d</color>
+    <color name="colorStatusBar">#212121</color>
+    <color name="whiteTransparentMarker">#00333333</color>
+
+    <color name="grey_600">#757575</color>
+    <color name="grey_300">#e0e0e0</color>
+    <color name="white">#ffffff</color>
+    <color name="background">#ffffff</color>
+
+    <color name="black">#000000</color>
+
+</resources>

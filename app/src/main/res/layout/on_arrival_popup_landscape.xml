@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:textAlignment="center">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/grey_300"
+        android:gravity="center"
+        android:text="@string/navigation_find_parking_spot"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/final_destination_layout">
+
+        <Button
+            android:id="@+id/final_destination_button"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/popup_button_arrival_green"
+            android:text="@string/navigate_to_final_destination"
+
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:stateListAnimator="@null" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="18dp"
+            android:layout_marginLeft="15dp"
+            android:alpha="1"
+            android:tint="@color/white"
+            android:visibility="visible"
+            app:srcCompat="@drawable/successfully_parked" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:id="@+id/next_area_button_layout">
+
+        <Button
+            android:id="@+id/next_area_button"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/popup_button_arrival_blue"
+            android:elevation="0dp"
+            android:text="@string/navigate_to_next_area"
+
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:stateListAnimator="@null" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:padding="18dp"
+            android:layout_marginLeft="15dp"
+            android:alpha="1"
+            android:tint="@color/white"
+            android:visibility="visible"
+            app:srcCompat="@drawable/next_option" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="0dp"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:background="@color/white"
+            android:padding="0dp"
+            android:stateListAnimator="@null"
+            android:text="@string/details_close"
+            android:textColor="@color/mapbox_navigation_view_color_primary_text_dark"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginRight="-20dp"
+            android:layout_toLeftOf="@id/cancel_button"
+            android:alpha="1"
+            android:padding="25dp"
+            android:tint="@color/mapbox_navigation_view_color_primary_text"
+            android:visibility="visible"
+            app:srcCompat="@drawable/close" />
+    </RelativeLayout>
+
+
+</LinearLayout>

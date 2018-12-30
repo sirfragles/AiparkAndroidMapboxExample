@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Aipark Mapbox Example</string>
+
+    <string name="zoom_in_to_see_parking_areas">Zoomen um Parkplätze zu sehen</string>
+    <string name="details_close">Schließen</string>
+    <string name="chanceFreeSpot">Deine Chance auf einen freien Parkplatz</string>
+    <string name="numberOfFreeSpots">Anzahl freier Stellplätze</string>
+    <string name="leavingParkingSpace">Ausgeparkt vor</string>
+    <string name="spots">Stellplätze</string>
+    <string name="opening_hours">Öffnungszeiten</string>
+    <string name="max_schedule">Maximale Parkdauer</string>
+    <string name="price">Preise</string>
+    <string name="residential_parking_area">Bewohnerparkplatz</string>
+    <string name="disabled_parking_area">Behindertengerecht</string>
+    <string name="woman_parking_area">Frauenparkplatz</string>
+    <string name="start_navigation">NAVIGATION STARTEN</string>
+    <string name="circa">ca.</string>
+    <string name="seconds_short">s</string>
+    <string name="minutes_short">min</string>
+    <string name="live_event_tooltip_postfix">Minuten</string>
+    <string name="navigate_to_final_destination">Ja, navigiere zum Ziel</string>
+    <string name="navigate_to_next_area">Nein, nächster Parkplatz</string>
+    <string name="navigation_find_parking_spot">Hast du einen Parkplatz gefunden?</string>
+    <string name="optimal_trip_popup_heading">Parkplatzsituation</string>
+    <string name="optimal_trip_search_time_heading">Parksuchroute</string>
+    <string name="use_public_transportation">Vermeide Stress und spare Geld, nutze die Öffentlichen. Hier ein KOSTENLOSER Gutschein für dich! Rabatt:</string>
+    <string name="park_and_ride_navigation">P + R NAVIGATION STARTEN</string>
+    <string name="speech_good_situation">Hier lässt es sich gut parken,</string>
+    <string name="speech_middle_situation">Die Parkplatzsituation ist durchwachsen,</string>
+    <string name="speech_bad_situation">Es ist wahrscheinlich voll,</string>
+    <string name="speech_unknown_situation">Hier liegen leider zu wenig Daten vor. Hier sind Parkplätze in der Nähe.</string>
+    <string name="speech_longer_search_time_pre">Du solltest dich auf eine längere Parkplatzsuche von etwa</string>
+    <string name="speech_longer_search_time_post">Minuten einstellen.</string>
+    <string name="speech_search_on_street_area">suche einen Parkplatz an der Straße.</string>
+    <string name="speech_drive_to_car_park">fahre besser in das Parkhaus</string>
+    <string name="speech_drive_to_area_pre">ich schlage dir vor, auf dem Parkplatz</string>
+    <string name="speech_drive_to_area_post">zu parken.</string>
+    <string name="my_car_parking_position">Parkposition</string>
+    <string name="destination">Ziel</string>
+    <string name="find_parking_with_aipark">Parkplätze einfach finden mit AIPARK</string>
+    <string name="parking_area_heading">Parkplatz</string>
+    <string name="navigation_start_heading">Navigation starten</string>
+    <string name="no_occupancies_available">Keine Auslastungsinformation verfügbar</string>
+    <string name="car_park_heading">Parkhaus</string>
+</resources>
